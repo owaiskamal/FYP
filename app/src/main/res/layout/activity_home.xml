@@ -32,7 +32,7 @@
                 android:layout_height="match_parent"
                 android:src="@drawable/clubsandwich"
                 android:scaleType="centerCrop"
-
+                android:id="@+id/Catsand"
 
                 />
 
