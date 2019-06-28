@@ -100,8 +100,8 @@ public class DEMOCLASS extends HiddenCameraActivity {
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
         FirebaseVisionFaceDetectorOptions option =
                 new FirebaseVisionFaceDetectorOptions.Builder()
-                        .setPerformanceMode(FirebaseVisionFaceDetectorOptions.FAST)
-                        .setLandmarkMode(FirebaseVisionFaceDetectorOptions.NO_LANDMARKS)
+                        .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
+                        .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
                         .setClassificationMode(FirebaseVisionFaceDetectorOptions.NO_CLASSIFICATIONS)
                         .build();
         FirebaseVisionFaceDetector detector = FirebaseVision.getInstance().getVisionFaceDetector(option);

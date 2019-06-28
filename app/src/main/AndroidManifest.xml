@@ -12,9 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Sandwich"></activity>
-        <activity android:name=".Catsandwich" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeActivity"></activity>
         <activity android:name=".DEMOCLASS" />
         <activity android:name=".splashScreen">
             <intent-filter>
