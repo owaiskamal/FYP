@@ -12,9 +12,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ADDTOCART"></activity>
+
+        <activity android:name=".orderview"></activity>
+        <activity android:name=".Sandwich"></activity>
         <activity android:name=".HomeActivity"></activity>
         <activity android:name=".DEMOCLASS" />
         <activity android:name=".splashScreen">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

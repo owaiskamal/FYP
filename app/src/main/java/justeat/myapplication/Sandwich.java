@@ -6,6 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 
 public class Sandwich extends AppCompatActivity {
 
@@ -21,17 +22,26 @@ public class Sandwich extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-            }
+
+                        Intent i = new Intent(Sandwich.this,orderview.class);
+                        startActivity(i);
+                 }
         });
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent i = new Intent(Sandwich.this,orderview.class);
+                startActivity(i);
 
             }
         });
         cardView2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                Intent i = new Intent(Sandwich.this,orderview.class);
+                startActivity(i);
 
             }
         });
