@@ -4,6 +4,7 @@ import android.Manifest;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -42,7 +43,6 @@ import com.google.firebase.ml.vision.face.FirebaseVisionFaceDetectorOptions;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
-
 public class DEMOCLASS extends HiddenCameraActivity {
     private static final int REQ_CODE_CAMERA_PERMISSION = 1253;
 
@@ -111,6 +111,8 @@ public class DEMOCLASS extends HiddenCameraActivity {
                                               OnSuccessListener<List<FirebaseVisionFace>>() {
                                                   @Override
                                                   public void onSuccess(List<FirebaseVisionFace> faces) {
+
+                                                      startActivity(new Intent(DEMOCLASS.this, HomeActivity.class));
                                                       Log.d("OWA" , "DONE");
 
                                                   }
@@ -119,6 +121,8 @@ public class DEMOCLASS extends HiddenCameraActivity {
                 .addOnFailureListener(new OnFailureListener() {
                     @Override
                     public void onFailure(@NonNull Exception e) {
+                        startActivity(new Intent(DEMOCLASS.this, MainActivity.class));
+
                         Log.d("OWA" , "NOT DOENEE");
                     }
                 });
