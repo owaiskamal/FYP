@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".HomeActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="1"
+        android:rowCount="4">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/it1"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/clubsandwich"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/Catsand" />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SANDWICH"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/it2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/egg"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/Burger" />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="EGG SANDWICH"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/it3"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            app:cardCornerRadius="20dp"
+            android:layout_margin="10dp">
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/sub"
+                    android:scaleType="centerCrop"
+                    android:id="@+id/Sub" />
+
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SUB SANDWICH"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#000"
+                android:textSize="24sp"
+                android:paddingLeft="16dp"
+                android:layout_marginLeft="25dp"
+                android:layout_gravity="center"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </GridLayout>
+</RelativeLayout>
