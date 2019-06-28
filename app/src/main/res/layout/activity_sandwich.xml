@@ -112,7 +112,7 @@
                 android:textColor="#000"
                 android:textSize="24sp"
                 android:paddingLeft="16dp"
-                android:layout_marginLeft="25dp"
+                android:layout_marginLeft="30dp"
                 android:layout_gravity="center"/>
 
         </androidx.cardview.widget.CardView>
