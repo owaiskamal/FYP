@@ -1,50 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="350dp"
-    android:layout_height="wrap_content"
-    android:layout_marginLeft="30dp"
-    android:layout_marginTop="50dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-<RelativeLayout
+<GridLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-
-
+    android:layout_height="wrap_content"
+    android:columnCount="1"
+    android:rowCount="4">
     <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp">
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+
+
+        >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageButton
                 android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                android:layout_height="match_parent"
+                android:src="@drawable/clubsandwich"
+                android:scaleType="centerCrop"
+
+
+                />
+
+
+
+
         </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SA&#160;ND&#160;WI&#160;CH&#160;"
+
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#ffff"
+            android:textSize="60dp"
+            android:layout_marginLeft="20dp"/>
 
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="25dp"
-        android:layout_marginTop="150dp">
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+
+
+        >
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <Button
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageButton
                 android:layout_width="match_parent"
-                android:layout_height="150dp" />
+                android:layout_height="match_parent"
+                android:src="@drawable/birya"
+                android:scaleType="centerCrop"
+
+
+                />
+
+
+
+
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B&#160;I&#160;R&#160;Y&#160;A&#160;N&#160;I&#160;"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#ffff"
+            android:textSize="60dp"
+            android:layout_marginLeft="20dp"/>
+
     </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/roll"
+                android:scaleType="centerCrop"
+
+
+                />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="R&#160;O&#160;L&#160;L&#160;"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#ffff"
+            android:textSize="60dp"
+            android:layout_marginLeft="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="10dp"
+
+
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cart_burger"
+                android:scaleType="centerCrop"
+
+
+                />
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="B&#160;U&#160;R&#160;G&#160;E&#160;R&#160;"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textColor="#ffff"
+            android:textSize="60dp"
+            android:layout_marginLeft="20dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</GridLayout>
 </RelativeLayout>
 
-</androidx.cardview.widget.CardView>
