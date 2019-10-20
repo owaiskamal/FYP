@@ -18,22 +18,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         FirebaseApp.initializeApp(MainActivity.this);
-        findViewById(R.id.btn_cick).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (mHiddenCameraFragment != null) {    //Remove fragment from container if present
-                    getSupportFragmentManager()
-                            .beginTransaction()
-                            .remove(mHiddenCameraFragment)
-                            .commit();
-                    mHiddenCameraFragment = null;
-
-
-                                   }
-
-                startActivity(new Intent(MainActivity.this, DEMOCLASS.class));
-            }
-        });
+//        findViewById(R.id.btn_cick).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                if (mHiddenCameraFragment != null) {    //Remove fragment from container if present
+//                    getSupportFragmentManager()
+//                            .beginTransaction()
+//                            .remove(mHiddenCameraFragment)
+//                            .commit();
+//                    mHiddenCameraFragment = null;
+//
+//
+//                                   }
+//
+//                startActivity(new Intent(MainActivity.this, DEMOCLASS.class));
+//            }
+//        });
     }
 
 
