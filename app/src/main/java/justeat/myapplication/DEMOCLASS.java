@@ -96,43 +96,43 @@ public class DEMOCLASS extends HiddenCameraActivity {
         options.inPreferredConfig = Bitmap.Config.RGB_565;
         Bitmap bitmap = BitmapFactory.decodeFile(imageFile.getAbsolutePath(), options);
 
-        FirebaseApp.initializeApp(DEMOCLASS.this);
+        stopCamera();
+        startFaceDetection(bitmap);
+
+    }
+
+    private void startFaceDetection(Bitmap bitmap) {
+        //FirebaseApp.initializeApp(DEMOCLASS.this);
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
         FirebaseVisionFaceDetectorOptions option =
                 new FirebaseVisionFaceDetectorOptions.Builder()
-                        .setPerformanceMode(FirebaseVisionFaceDetectorOptions.ACCURATE)
-                        .setLandmarkMode(FirebaseVisionFaceDetectorOptions.ALL_LANDMARKS)
-                        .setClassificationMode(FirebaseVisionFaceDetectorOptions.NO_CLASSIFICATIONS)
                         .build();
         FirebaseVisionFaceDetector detector = FirebaseVision.getInstance().getVisionFaceDetector(option);
-        Task<List<FirebaseVisionFace>> result = detector
+        detector
                 .detectInImage(image)
-                .addOnSuccessListener(new
-                                              OnSuccessListener<List<FirebaseVisionFace>>() {
-                                                  @Override
-                                                  public void onSuccess(List<FirebaseVisionFace> faces) {
+                .addOnSuccessListener(faces -> {
 
-                                                      startActivity(new Intent(DEMOCLASS.this, HomeActivity.class));
-                                                      Log.d("OWA" , "DONE");
+                    if(faces.isEmpty())
+                    {
+                        startActivity(new Intent(DEMOCLASS.this, DEMOCLASS.class));
 
-                                                  }
-
-                                              })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        startActivity(new Intent(DEMOCLASS.this, MainActivity.class));
-
-                        Log.d("OWA" , "NOT DOENEE");
                     }
+                    else {
+                        DEMOCLASS.this.startActivity(new Intent(DEMOCLASS.this, HomeActivity.class));
+                        Log.d("OWA", "Face Not Detected");
+
+                    }
+                })
+                .addOnFailureListener(e -> {
+                    startActivity(new Intent(DEMOCLASS.this, MainActivity.class));
+
+                    Log.d("OWA" , e.getMessage());
                 });
 
     }
 
 
-
-
-        //Display the image to the image view
+    //Display the image to the image view
 
 
 
