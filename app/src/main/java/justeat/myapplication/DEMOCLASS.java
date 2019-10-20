@@ -119,7 +119,7 @@ public class DEMOCLASS extends HiddenCameraActivity {
                     }
                     else {
                         DEMOCLASS.this.startActivity(new Intent(DEMOCLASS.this, HomeActivity.class));
-                        Log.d("OWA", "DONE");
+                        Log.d("OWA", "Face Not Detected");
 
                     }
                 })
