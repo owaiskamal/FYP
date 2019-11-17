@@ -1,50 +1,42 @@
 {
   "project_info": {
-    "project_number": "764141036455",
-    "firebase_url": "https://projectapp-91cc5.firebaseio.com",
-    "project_id": "projectapp-91cc5",
-    "storage_bucket": "projectapp-91cc5.appspot.com"
+    "project_number": "504879277852",
+    "firebase_url": "https://mlkit2-bd4f7.firebaseio.com",
+    "project_id": "mlkit2-bd4f7",
+    "storage_bucket": "mlkit2-bd4f7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:764141036455:android:9dfbb672551aa9db",
+        "mobilesdk_app_id": "1:504879277852:android:08bf90714f484451",
         "android_client_info": {
-          "package_name": "justeat.myapplication"
+          "package_name": "com.fa15bs0085.mlkit"
         }
       },
       "oauth_client": [
         {
-          "client_id": "764141036455-qp11l62ojg2t8kv4kg5jngbr8jukngga.apps.googleusercontent.com",
+          "client_id": "504879277852-b0s5cjv7t9t7sgs87uue8sf97jo4ebkn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "justeat.myapplication",
-            "certificate_hash": "43400bb9bf686cecdfdd8aee6f469e58c07cb0de"
+            "package_name": "com.fa15bs0085.mlkit",
+            "certificate_hash": "e19db990c09893fb84cff686ff9f26f7e6c99f78"
           }
         },
         {
-          "client_id": "764141036455-lanrkg1il9e51lmfc66frqo6she1i6ac.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "justeat.myapplication",
-            "certificate_hash": "786529526471805c37abe7643e2e468f1c8e34f7"
-          }
-        },
-        {
-          "client_id": "764141036455-3htvfrng9d08otdeqhc5466upcsr2079.apps.googleusercontent.com",
+          "client_id": "504879277852-v7te3aqlig4i95s6feogmp5qkqanfl75.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8a-IyogcCdRth25VNwziyvzJC6SUEtXU"
+          "current_key": "AIzaSyDTXyq77CLWOjRoRNc6yfKJdMulP-L3_nU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "764141036455-3htvfrng9d08otdeqhc5466upcsr2079.apps.googleusercontent.com",
+              "client_id": "504879277852-v7te3aqlig4i95s6feogmp5qkqanfl75.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -53,35 +45,35 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:764141036455:android:e7cf7df8080889d5",
+        "mobilesdk_app_id": "1:504879277852:android:75ac9b512d767a6d037cd9",
         "android_client_info": {
-          "package_name": "justeat.projectapp"
+          "package_name": "justeat.myapplication"
         }
       },
       "oauth_client": [
         {
-          "client_id": "764141036455-0fin1mqtdh5bn29q35gcm412v6no13kp.apps.googleusercontent.com",
+          "client_id": "504879277852-jcbd41irgbmdsa8roetsvf4novbma83l.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "justeat.projectapp",
-            "certificate_hash": "786529526471805c37abe7643e2e468f1c8e34f7"
+            "package_name": "justeat.myapplication",
+            "certificate_hash": "47253889fd2801f15b054f0528f9e9b52429f951"
           }
         },
         {
-          "client_id": "764141036455-3htvfrng9d08otdeqhc5466upcsr2079.apps.googleusercontent.com",
+          "client_id": "504879277852-v7te3aqlig4i95s6feogmp5qkqanfl75.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC8a-IyogcCdRth25VNwziyvzJC6SUEtXU"
+          "current_key": "AIzaSyDTXyq77CLWOjRoRNc6yfKJdMulP-L3_nU"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "764141036455-3htvfrng9d08otdeqhc5466upcsr2079.apps.googleusercontent.com",
+              "client_id": "504879277852-v7te3aqlig4i95s6feogmp5qkqanfl75.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

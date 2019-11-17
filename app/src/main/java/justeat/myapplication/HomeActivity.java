@@ -36,6 +36,8 @@ public class HomeActivity extends AppCompatActivity {
        recyclerView.setLayoutManager( new LinearLayoutManager(this  ));
         List = new  ArrayList<Category>();
 
+        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
+
         reference= FirebaseDatabase.getInstance().getReference().child("Categories");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
