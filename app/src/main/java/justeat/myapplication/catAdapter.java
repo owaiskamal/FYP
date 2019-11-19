@@ -37,7 +37,7 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.myViewHolder> {
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
        holder.name.setText(categories.get(position).getCategoryName());
         Picasso.get().load(categories.get(position).getUrl()).into(holder.picture);
-            holder.btn.setVisibility(View.VISIBLE);
+           // holder.btn.setVisibility(View.VISIBLE);
 
     }
 
@@ -48,23 +48,27 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.myViewHolder> {
 
     class myViewHolder extends RecyclerView.ViewHolder
     {
-        TextView name;
+            TextView name;
             ImageView picture;
-            Button btn;
+         //   Button btn;
         public myViewHolder(View itemView) {
             super(itemView);
+
+
             name= (TextView) itemView.findViewById(R.id.name);
            picture=(ImageView )itemView.findViewById(R.id.category);
-           btn=(Button)itemView.findViewById(R.id.checkDetails);
-        }
-        public  void onClick(int position){
-            btn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Toast.makeText(context,position+"is clicked",Toast.LENGTH_SHORT).show();
-                }
-            });
 
+
+           //btn=(Button)itemView.findViewById(R.id.checkDetails);
         }
+//        public  void onClick(int position){
+//            btn.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    Toast.makeText(context,position+"is clicked",Toast.LENGTH_SHORT).show();
+//                }
+//            });
+//
+//        }
     }
 }
