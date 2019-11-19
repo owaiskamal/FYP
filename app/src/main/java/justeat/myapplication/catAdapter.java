@@ -53,8 +53,12 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.myViewHolder> {
          //   Button btn;
         public myViewHolder(View itemView) {
             super(itemView);
+
+
             name= (TextView) itemView.findViewById(R.id.name);
            picture=(ImageView )itemView.findViewById(R.id.category);
+
+
            //btn=(Button)itemView.findViewById(R.id.checkDetails);
         }
 //        public  void onClick(int position){

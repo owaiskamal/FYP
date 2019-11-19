@@ -63,7 +63,7 @@
             android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:id="@+id/category"
-            android:background="#fff"/>
+            android:background="#ffffff"/>
 
         <TextView
             android:layout_width="match_parent"
