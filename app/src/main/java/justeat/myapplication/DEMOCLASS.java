@@ -16,6 +16,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
@@ -75,15 +76,33 @@ public class DEMOCLASS extends HiddenCameraActivity {
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA},
                     REQ_CODE_CAMERA_PERMISSION);
         }
-     //Take a picture
-        findViewById(R.id.capture_btn).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //Take picture using the camera without preview.
-                takePicture();
+        //Take a picture
+//        findViewById(R.id.capture_btn).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                //Take picture using the camera without preview.
+//                takePicture();
+//            }
+//        });
+        final Handler h = new Handler();
+        h.post(new Runnable() {
+            public void run() {
+                try{
+                    takePicture();
+                }
+                catch (Exception e)
+                {
+                    e.printStackTrace();
+                }
+                finally {
+                    h.postDelayed(this, 10000);
+                }
+
+
             }
         });
     }
+
 
 
 
@@ -105,7 +124,7 @@ public class DEMOCLASS extends HiddenCameraActivity {
         //FirebaseApp.initializeApp(DEMOCLASS.this);
         FirebaseVisionImage image = FirebaseVisionImage.fromBitmap(bitmap);
         FirebaseVisionFaceDetectorOptions option =
-                new FirebaseVisionFaceDetectorOptions.Builder()
+                new FirebaseVisionFaceDetectorOptions.Builder().setMinFaceSize(0.5f)
                         .build();
         FirebaseVisionFaceDetector detector = FirebaseVision.getInstance().getVisionFaceDetector(option);
         detector
