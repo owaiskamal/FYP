@@ -6,14 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".DEMOCLASS">
 
-
-
-
-    <Button
+    <com.airbnb.lottie.LottieAnimationView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/capture_btn"
-        android:text="click"
-        android:layout_alignParentBottom="true" />
+        android:layout_height="match_parent"
+        android:id="@+id/animation"
+        app:lottie_loop="true"
+        app:lottie_fileName="lf30_editor_oPmZWm.json"
+        app:lottie_autoPlay="true">
+
+    </com.airbnb.lottie.LottieAnimationView>
+
+
 
 </RelativeLayout>
