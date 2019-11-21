@@ -23,6 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringTokenizer;
 
 public class HomeActivity extends AppCompatActivity implements catAdapter.onNoteClickListener  {
 
@@ -89,8 +90,11 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
     public void onNoteClick(int position) {
 
         Log.d("OWA", "onNoteClick: " + keyArray.get(position));
+        String key = keyArray.get(position);
+
 //        //List.get(position);
-//        Intent intent = new Intent(this , orderview.class);
-//        intent.putExtra("Key" , key);
-    }
+        Intent intent = new Intent(this , product_activity.class);
+        intent.putExtra("Key" , key);
+        startActivity(intent);
+            }
 }

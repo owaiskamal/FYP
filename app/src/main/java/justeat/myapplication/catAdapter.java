@@ -29,6 +29,8 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.myViewHolder> {
         this.mOnNoteClickListener = mOnNoteClickListener;
     }
 
+
+
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -55,7 +57,7 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.myViewHolder> {
 
             Button btn;
             onNoteClickListener onNoteClickListener;
-        public myViewHolder(View itemView , onNoteClickListener onNoteClickListener) {
+              public myViewHolder(View itemView , onNoteClickListener onNoteClickListener) {
          //   Button btn;
             super(itemView);
 
