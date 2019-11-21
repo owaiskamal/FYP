@@ -38,7 +38,8 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.myViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
        holder.name.setText(categories.get(position).getCategoryName());
-        Picasso.get().load(categories.get(position).getUrl()).into(holder.picture);
+        Picasso.get().load(categories.get(position).getUrl()).resize(600 , 200)
+                .onlyScaleDown().centerCrop().into(holder.picture);
 
     }
 
