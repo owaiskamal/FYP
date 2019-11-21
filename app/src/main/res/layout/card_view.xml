@@ -42,38 +42,38 @@
 
 <!--</LinearLayout>-->
 
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    app:cardCornerRadius="10dp"
 
-    android:elevation="90dp">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:background="#F6F6F6"
+    android:layout_marginBottom="20dp"
+    android:elevation="90dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="248dp"
-        android:orientation="vertical"
-        android:background="#121111">
-
-
-        <ImageButton
             android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            android:id="@+id/category"
-            android:background="#ffffff"/>
+            android:layout_height="270dp"
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/name"
-            android:textSize="20dp"
-            android:textColor="#ffff"
-            android:text="POST TITLE"
-            android:layout_marginLeft="10dp"/>
-    </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:layout_margin="10dp"
+                android:id="@+id/category"/>
 
-
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hello"
+                android:textSize="22dp"
+                android:id="@+id/name"
+                android:layout_marginLeft="15dp"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
