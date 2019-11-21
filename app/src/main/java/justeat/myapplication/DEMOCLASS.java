@@ -95,7 +95,7 @@ public class DEMOCLASS extends HiddenCameraActivity {
                     e.printStackTrace();
                 }
                 finally {
-                    h.postDelayed(this, 10000);
+                    h.postDelayed(this, 5000);
                 }
 
 
