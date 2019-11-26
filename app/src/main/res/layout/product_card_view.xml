@@ -74,12 +74,21 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-                    <ImageView
+<!--                    <ImageView-->
+<!--                        android:layout_alignParentRight="true"-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_marginTop="-8dp"-->
+<!--                        android:layout_height="100dp"-->
+<!--                        android:id="@+id/Productimage"/>-->
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/Productimage"
+                        android:layout_width="120dp"
                         android:layout_alignParentRight="true"
-                        android:layout_width="150dp"
-                        android:layout_marginTop="-8dp"
-                        android:layout_height="100dp"
-                        android:id="@+id/Productimage"/>
+                        android:layout_height="120dp"
+                        />
                 </RelativeLayout>
 
             </LinearLayout>
