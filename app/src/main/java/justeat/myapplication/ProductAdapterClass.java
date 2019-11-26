@@ -1,30 +1,40 @@
 package justeat.myapplication;
+
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
+
+
+
+
 public class ProductAdapterClass  extends RecyclerView.Adapter<ProductAdapterClass.myViewHolder>  {
 
 
     Context context;
     ArrayList<Product> products = new ArrayList<>() ;
- //   catAdapter.onNoteClickListener mOnNoteClickListener;
-    public ProductAdapterClass( Context c , ArrayList<Product> p)
+
+
+    onNoteClickListener mOnNoteClickListener;
+
+    //   catAdapter.onNoteClickListener mOnNoteClickListener;
+    public ProductAdapterClass( Context c , ArrayList<Product> p, onNoteClickListener mOnNoteClickListener)
     {
         context = c;
         products = p;
-        //this.mOnNoteClickListener = mOnNoteClickListener;
+        this.mOnNoteClickListener = mOnNoteClickListener;
     }
 
 
@@ -32,15 +42,15 @@ public class ProductAdapterClass  extends RecyclerView.Adapter<ProductAdapterCla
     @NonNull
     @Override
     public  ProductAdapterClass.myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-         return new myViewHolder(LayoutInflater.from(context).inflate((R.layout.product_card_view), parent, false));
+        return new myViewHolder(LayoutInflater.from(context).inflate((R.layout.product_card_view), parent, false), mOnNoteClickListener);
 
     }
 
     @Override
-     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
-          holder.name.setText(products.get(position).getProductName());
-          holder.Description.setText(products.get(position).getProductDescription());
-         holder.price .setText(products.get(position).getProductPrice());
+    public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
+        holder.name.setText(products.get(position).getProductName());
+        holder.Description.setText(products.get(position).getProductDescription());
+        holder.price .setText(products.get(position).getProductPrice());
         Picasso.get().load(products.get(position).getUrl()).into(holder.imgs);
 
 
@@ -55,28 +65,39 @@ public class ProductAdapterClass  extends RecyclerView.Adapter<ProductAdapterCla
     }
 
 
-    class myViewHolder extends RecyclerView.ViewHolder
+    class myViewHolder extends RecyclerView.ViewHolder  implements View.OnClickListener
     {
-            TextView name,Description,price;
+        onNoteClickListener onNoteClickListener;
+
+        TextView name,Description,price;
+
         ImageView imgs;
 
-        public myViewHolder(View itemView) {
-                    super(itemView);
+        public myViewHolder(View itemView , onNoteClickListener onNoteClickListener ) {
+            super(itemView);
 
-          name =(TextView)itemView.findViewById(R.id.name);
-          Description=(TextView)itemView.findViewById(R.id.Description);
-          price=(TextView)itemView.findViewById(R.id.price);
-             imgs=(ImageView)itemView.findViewById(R.id.Productimage);
+            name =(TextView)itemView.findViewById(R.id.name);
+            Description=(TextView)itemView.findViewById(R.id.Description);
+            price=(TextView)itemView.findViewById(R.id.price);
+            imgs=(ImageView)itemView.findViewById(R.id.Productimage);
+            this.onNoteClickListener = onNoteClickListener;
+            itemView.setOnClickListener(this);
+
+
+        }
+
+        @Override
+        public void onClick(View view) {
+
+            onNoteClickListener.onNoteClick(getAdapterPosition());
+
         }
 
 
         //btn=(Button)itemView.findViewById(R.id.checkDetails);
-        }
+    }
 
+    public interface onNoteClickListener{
+        public void onNoteClick(final int position);
+    }
 }
-
-
-
-
-
-
