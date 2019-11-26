@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".ADDTOCART"></activity>
-
+        <activity android:name=".product_activity"></activity>
         <activity android:name=".orderview"></activity>
         <activity android:name=".Sandwich"></activity>
         <activity android:name=".HomeActivity">
