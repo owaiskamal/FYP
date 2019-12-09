@@ -81,7 +81,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         //cartMap.put("pid",parent_id);
         cartMap.put("Product Name",productName.getText().toString());
         cartMap.put("Product Description",productDescription.getText().toString());
-        cartMap.put("Product Price","RS"+ productPrice.getText().toString());
+        cartMap.put("Product Price", productPrice.getText().toString());
         cartMap.put("Date",saveCurrentDate);
         cartMap.put("Time", saveCurrentTime);
         cartMap.put("Quantity",numberButton.getNumber());

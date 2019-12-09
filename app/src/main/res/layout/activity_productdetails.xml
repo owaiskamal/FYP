@@ -53,7 +53,7 @@
      android:elevation="6dp"
     app:layout_anchorGravity="bottom|right|end"
      android:backgroundTint="#fff"
-     android:src="@drawable/ic_check_black_24dp"/>
+     android:src="@drawable/ic_shopping_cart_black_24dp"/>
 
  <androidx.core.widget.NestedScrollView
      android:layout_width="match_parent"
