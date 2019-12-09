@@ -1,4 +1,4 @@
-package justeat.myapplication;
+package justeat.myapplication.Model;
 
 public class Product {
 

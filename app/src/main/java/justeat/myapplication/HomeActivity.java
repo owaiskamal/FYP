@@ -8,10 +8,6 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,11 +15,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
-
 import java.util.ArrayList;
 import java.util.List;
-import java.util.StringTokenizer;
+
+import justeat.myapplication.Model.Category;
 
 public class HomeActivity extends AppCompatActivity implements catAdapter.onNoteClickListener  {
 
@@ -53,7 +48,7 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
 
                 for(DataSnapshot dataSnapshot1 :dataSnapshot.getChildren())
                 {
-                    Category ca=dataSnapshot1.getValue(Category.class);
+                    Category ca = dataSnapshot1.getValue(Category.class);
                     list.add(ca);
                     key= dataSnapshot1.getRef().getKey().toString();
                     keyArray.add(key);
@@ -71,18 +66,6 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
             }
         });
 
-
-
-
-
-
-//        ImageButton img = (ImageButton) findViewById(R.id.Catsand);
-//        img.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                startActivity(new Intent(HomeActivity.this, Sandwich.class));
-//            }
-//        });
     }
 
 

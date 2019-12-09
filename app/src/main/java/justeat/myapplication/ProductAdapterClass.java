@@ -5,10 +5,8 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,7 +15,7 @@ import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-
+import justeat.myapplication.Model.Product;
 
 
 public class ProductAdapterClass  extends RecyclerView.Adapter<ProductAdapterClass.myViewHolder>  {
@@ -50,11 +48,9 @@ public class ProductAdapterClass  extends RecyclerView.Adapter<ProductAdapterCla
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
         holder.name.setText(products.get(position).getProductName());
         holder.Description.setText(products.get(position).getProductDescription());
-        holder.price .setText(products.get(position).getProductPrice());
+        holder.price.setText("RS " + products.get(position).getProductPrice());
+
         Picasso.get().load(products.get(position).getUrl()).into(holder.imgs);
-
-
-
 
     }
 

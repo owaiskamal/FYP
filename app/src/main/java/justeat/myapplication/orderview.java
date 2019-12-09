@@ -24,7 +24,7 @@ public class orderview extends AppCompatActivity {
      b.setOnClickListener(new View.OnClickListener() {
          @Override
          public void onClick(View v) {
-             Intent i = new Intent(orderview.this,ADDTOCART.class);
+             Intent i = new Intent(orderview.this, ProductDetailsActivity.class);
              startActivity(i);
          }
      });

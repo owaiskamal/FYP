@@ -2,16 +2,15 @@
 
 <androidx.cardview.widget.CardView android:layout_marginTop="16dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    app:cardCornerRadius="8dp"
+    android:layout_height="140dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="14dp">
+            android:layout_marginBottom="-5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -21,20 +20,21 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="Food Menu1"
                         android:textColor="#fdb501"
-                        android:textSize="24dp"
+                        android:textSize="28dp"
                         android:id="@+id/name"/>
 
                     <LinearLayout
                         android:orientation="horizontal"
                         android:layout_width="wrap_content"
-                        android:layout_marginTop="16dp"
                         android:layout_height="wrap_content">
 
                         <LinearLayout
@@ -52,7 +52,6 @@
                                 android:id="@+id/Description"/>
 
                             <TextView
-                                android:layout_gravity="center"
                                 android:layout_width="wrap_content"
                                 android:textSize="20dp"
                                 android:textColor="#6A90B5"
@@ -74,26 +73,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
 
-<!--                    <ImageView-->
-<!--                        android:layout_alignParentRight="true"-->
-<!--                        android:layout_width="150dp"-->
-<!--                        android:layout_marginTop="-8dp"-->
-<!--                        android:layout_height="100dp"-->
-<!--                        android:id="@+id/Productimage"/>-->
-
-
                     <de.hdodenhof.circleimageview.CircleImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
                         android:id="@+id/Productimage"
                         android:layout_width="120dp"
                         android:layout_alignParentRight="true"
                         android:layout_height="120dp"
-                        />
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="10dp"/>
                 </RelativeLayout>
 
             </LinearLayout>
 
+
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
-

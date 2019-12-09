@@ -19,4 +19,5 @@
         android:paddingLeft="16dp"
         android:layout_gravity="center"
         android:id="@+id/txt"/>
+
 </LinearLayout>
