@@ -23,16 +23,13 @@ public class Sandwich extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                        Intent i = new Intent(Sandwich.this,orderview.class);
-                        startActivity(i);
+
                  }
         });
         cardView1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Sandwich.this,orderview.class);
-                startActivity(i);
 
             }
         });
@@ -40,8 +37,7 @@ public class Sandwich extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent i = new Intent(Sandwich.this,orderview.class);
-                startActivity(i);
+
 
             }
         });

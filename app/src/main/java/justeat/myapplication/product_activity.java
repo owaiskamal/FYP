@@ -51,7 +51,7 @@ public class product_activity extends AppCompatActivity implements ProductAdapte
         query.equalTo(parent_id).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                for(DataSnapshot dataSnapshot1 :dataSnapshot.getChildren())
+                for(DataSnapshot dataSnapshot1 : dataSnapshot.getChildren())
                 {
                     Product ca=dataSnapshot1.getValue(Product.class);
                     list.add(ca);

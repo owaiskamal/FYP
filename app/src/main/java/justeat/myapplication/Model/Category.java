@@ -2,8 +2,9 @@ package justeat.myapplication.Model;
 
 public class Category {
     public String categoryName;
-
     public String url;
+
+
     public Category(String categoryName, String url) {
         this.categoryName = categoryName;
         this.url = url;

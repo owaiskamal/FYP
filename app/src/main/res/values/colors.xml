@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#004d40</color>
-    <color name="colorPrimaryDark">#00251a</color>
+    <color name="colorPrimary">#0a091b</color>
+    <color name="colorPrimaryDark">#070716</color>
     <color name="colorAccent">#39796b</color>
     <color name="colorpurple">#7d77f2</color>
+    <color name="bottomtext">#6b6b76</color>
+
     
     <color name="overlayBackground">#7f336639</color>
     <color name="overlayActionBar">#0e0d0e</color>

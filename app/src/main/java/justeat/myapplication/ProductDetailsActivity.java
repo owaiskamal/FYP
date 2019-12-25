@@ -76,23 +76,22 @@ public class ProductDetailsActivity extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("HH:mm:ss a");
         saveCurrentTime = currentTime.format(callForDate.getTime());
 
-        final DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("Cart List");
+        final DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("CartList");
         final HashMap<String, Object> cartMap = new HashMap<>();
-        //cartMap.put("pid",parent_id);
-        cartMap.put("Product Name",productName.getText().toString());
-        cartMap.put("Product Description",productDescription.getText().toString());
-        cartMap.put("Product Price", productPrice.getText().toString());
-        cartMap.put("Date",saveCurrentDate);
-        cartMap.put("Time", saveCurrentTime);
-        cartMap.put("Quantity",numberButton.getNumber());
+        cartMap.put("pid",parent_id);
+        cartMap.put("productName",productName.getText().toString());
+        cartMap.put("productDescription",productDescription.getText().toString());
+        cartMap.put("productPrice", productPrice.getText().toString());
+        cartMap.put("time",  saveCurrentTime);
+        cartMap.put("quantity",numberButton.getNumber());
 
-        reference.child(parent_id).updateChildren(cartMap)
+        reference.child("products").child(parent_id).updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Toast.makeText(ProductDetailsActivity.this,"added successfully",Toast.LENGTH_SHORT).show();
 
-                        Intent intent = new Intent(ProductDetailsActivity.this,CartListActivity.class);
+                        Intent intent = new Intent(ProductDetailsActivity.this,CartActivity.class);
                        startActivity(intent);
                     }
                 });

@@ -12,10 +12,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CartListActivity"></activity>
+        <activity android:name=".ConfirmOrderActivity"></activity>
+        <activity android:name=".CartActivity" />
+
         <activity android:name=".ProductDetailsActivity" />
         <activity android:name=".product_activity" />
-        <activity android:name=".orderview" />
+
         <activity android:name=".Sandwich" />
         <activity android:name=".HomeActivity">
             <intent-filter>

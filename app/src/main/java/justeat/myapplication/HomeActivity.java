@@ -8,8 +8,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,6 +29,7 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
     ArrayList<Category> list = new ArrayList<>();
     catAdapter adapter;
     String key;
+    FloatingActionButton btn;
     public static final List<String> keyArray = new ArrayList<>();
 
     @Override
@@ -36,6 +39,14 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
 
        recyclerView=(RecyclerView) findViewById(R.id.myRecycler);
        recyclerView.setLayoutManager( new LinearLayoutManager(this  ));
+       btn = (FloatingActionButton) findViewById(R.id.goToCart);
+       btn.setOnClickListener(new View.OnClickListener() {
+           @Override
+           public void onClick(View v) {
+               Intent intent = new Intent(HomeActivity.this,CartActivity.class);
+               startActivity(intent);
+           }
+       });
 
         FirebaseDatabase.getInstance().setPersistenceEnabled(true);
 

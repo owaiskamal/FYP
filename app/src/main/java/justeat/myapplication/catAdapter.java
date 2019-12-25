@@ -50,6 +50,9 @@ public class catAdapter extends RecyclerView.Adapter<catAdapter.myViewHolder> {
         return categories.size();
     }
 
+
+
+
     class myViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView name;
         ImageView picture;
