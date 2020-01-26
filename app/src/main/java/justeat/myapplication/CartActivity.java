@@ -61,13 +61,18 @@ public class CartActivity extends AppCompatActivity {
 
     }
 
-
-    @Override
+@Override
     protected void onStart() {
         super.onStart();
 
        final DatabaseReference cartListRef =
        FirebaseDatabase.getInstance().getReference().child("CartList");
+
+
+
+
+
+
 
        FirebaseRecyclerOptions<Cart> options = new
                FirebaseRecyclerOptions.Builder<Cart>()
