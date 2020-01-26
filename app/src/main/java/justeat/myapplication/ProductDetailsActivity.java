@@ -27,6 +27,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 
 import justeat.myapplication.Model.Product;
+import justeat.myapplication.Model.TableNo;
 
 public class ProductDetailsActivity extends AppCompatActivity {
 
@@ -85,7 +86,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("time",  saveCurrentTime);
         cartMap.put("quantity",numberButton.getNumber());
 
-        reference.child("products").child(parent_id).updateChildren(cartMap)
+        reference.child(TableNo.tableNo).child(parent_id).updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {

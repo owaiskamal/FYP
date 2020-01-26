@@ -20,10 +20,15 @@ import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import justeat.myapplication.Model.Cart;
+import justeat.myapplication.Model.TableNo;
 import justeat.myapplication.ViewHolder.CartViewHolder;
 
 public class CartActivity extends AppCompatActivity {
@@ -33,6 +38,8 @@ public class CartActivity extends AppCompatActivity {
     private Button Nextbutton;
     private TextView txtTotal;
     private int totalPrice;
+    private TableNo table;
+    private String tableno;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,11 +55,13 @@ public class CartActivity extends AppCompatActivity {
         Nextbutton = (Button) findViewById(R.id.btnNext);
         txtTotal = (TextView)findViewById(R.id.Pprice);
 
+
         Nextbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(CartActivity.this, ConfirmOrderActivity.class);
                 intent.putExtra("Total Price", String.valueOf(totalPrice));
+                //intent.putExtra("cart" , )
                 startActivity(intent);
                 finish();
             }
@@ -71,7 +80,7 @@ public class CartActivity extends AppCompatActivity {
 
        FirebaseRecyclerOptions<Cart> options = new
                FirebaseRecyclerOptions.Builder<Cart>()
-               .setQuery(cartListRef.child("products"),Cart.class).build();
+               .setQuery(cartListRef.child(TableNo.tableNo),Cart.class).build();
 
 
         FirebaseRecyclerAdapter<Cart, CartViewHolder> adapter =
@@ -110,7 +119,7 @@ public class CartActivity extends AppCompatActivity {
                                         }
 
                                         if(i == 1){
-                                            cartListRef.child("products").child(model.getPid())
+                                            cartListRef.child(TableNo.tableNo).child(model.getPid())
                                                     .removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
                                                         @Override
                                                         public void onComplete(@NonNull Task<Void> task) {
