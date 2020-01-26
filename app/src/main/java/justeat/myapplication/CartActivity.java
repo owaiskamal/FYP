@@ -56,6 +56,7 @@ public class CartActivity extends AppCompatActivity {
                 startActivity(intent);
                 finish();
             }
+
         });
 
 
@@ -64,16 +65,8 @@ public class CartActivity extends AppCompatActivity {
 @Override
     protected void onStart() {
         super.onStart();
-
-       final DatabaseReference cartListRef =
+        final DatabaseReference cartListRef =
        FirebaseDatabase.getInstance().getReference().child("CartList");
-
-
-
-
-
-
-
        FirebaseRecyclerOptions<Cart> options = new
                FirebaseRecyclerOptions.Builder<Cart>()
                .setQuery(cartListRef.child("products"),Cart.class).build();
