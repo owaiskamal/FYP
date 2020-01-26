@@ -352,12 +352,14 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
         else  {
 
             try {
-                TimeUnit.SECONDS.sleep(10);
+
+                TimeUnit.MILLISECONDS.sleep(5000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
             tts.setLanguage(Locale.US);
-            speak("OrderManual");
+            speak( "I cant  Understand what  you are saying.  Order Manual");
+
             //  Speeches();
 
         }
@@ -374,7 +376,7 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
                 } else {
                     tts.setLanguage(Locale.US);
                     //  speak("Welcome Sir Hello  i m waiter  I m agent , "+"We have  Starters" +"We have  Burgers"+"We have  SandWiches"+"We have  BBQ"+"We Have chinese   ");
-                    speak("i'm  waiter. i am your pushy");
+                    speak("i'm  waiter");
                     Speeches();
 
                 }
@@ -394,7 +396,7 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        // Inflate the menu; this adds items to the action bar if it is present.
 //        getMenuInflater().inflate(R.menu.menu_main, menu);
-//        return true;
+//0        return true;
 //    }
 //
 //    @Override
@@ -428,6 +430,13 @@ public class HomeActivity extends AppCompatActivity implements catAdapter.onNote
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        initializeSpeechRecognizer();
+        initializeTextToSpeech();
+        Speeches();
 
 
+    }
 }
