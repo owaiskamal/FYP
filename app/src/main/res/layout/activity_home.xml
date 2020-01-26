@@ -7,11 +7,11 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/myRecycler"></androidx.recyclerview.widget.RecyclerView>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/myRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
@@ -23,5 +23,15 @@
         android:backgroundTint="#fff"
         android:src="@drawable/ic_shopping_cart_black_24dp"
         android:id="@+id/goToCart"/>
-</RelativeLayout>
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="94dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="54dp"
+        app:srcCompat="@drawable/ic_mic_black_24dp" />
+</RelativeLayout>
