@@ -24,8 +24,7 @@ public class ConfirmOrderActivity extends AppCompatActivity {
     private Button btnConfirm;
     private String totalAmount = "";
     List<Cart> cart = new ArrayList<>();
-    FirebaseDatabase database;
-    DatabaseReference requests;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
