@@ -7,6 +7,7 @@ public class Cart {
     private String productPrice;
     private String quantity;
     private String time;
+    private String tableNo;
 
 
     public String getPid() {
@@ -25,17 +26,24 @@ public class Cart {
         this.time = time;
     }
 
+    public String getTableNo() {
+        return tableNo;
+    }
 
+    public void setTableNo(String tableNo) {
+        this.tableNo = tableNo;
+    }
 
     public Cart() {}
 
-    public Cart(String pid , String time ,  String productName, String productDescription, String productPrice, String quantity) {
+    public Cart(String pid , String time ,  String productName, String productDescription, String productPrice, String quantity , String tableNo) {
         this.productName = productName;
         this.productDescription = productDescription;
         this.productPrice = productPrice;
         this.quantity = quantity;
         this.pid = pid;
         this.time = time;
+        this.tableNo = tableNo;
     }
 
 

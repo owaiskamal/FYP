@@ -85,6 +85,7 @@ public class ProductDetailsActivity extends AppCompatActivity {
         cartMap.put("productPrice", productPrice.getText().toString());
         cartMap.put("time",  saveCurrentTime);
         cartMap.put("quantity",numberButton.getNumber());
+        cartMap.put("tableNo" , TableNo.tableNo);
 
         reference.child(TableNo.tableNo).child(parent_id).updateChildren(cartMap)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {

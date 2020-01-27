@@ -11,8 +11,8 @@ public class orderList {
     public orderList() {
     }
 
-    public orderList(String name, String tableNo , String totalPrice , List<Cart> order) {
-        this.name = name;
+    public orderList(String tableNo , String totalPrice , List<Cart> order) {
+        //this.name = name;
         this.tableNo = tableNo;
         this.order = order;
         this.totalPrice = totalPrice;
